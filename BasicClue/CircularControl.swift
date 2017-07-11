@@ -52,7 +52,7 @@ class CircularControl: UIControl {
     }
     
     private func point(fromAngle angle: Int) -> CGPoint {
-        let angleRadians = Double(GLKMathDegreesToRadians(Float(angle)))
+        let angleRadians = Double(GLKMathDegreesToRadians(Float(angle - 90)))
         
         let yCoord = round(Double(radius) * sin(angleRadians)) + Double(circleCenter.y)
         let xCoord = round(Double(radius) * cos(angleRadians)) + Double(circleCenter.x)
@@ -75,13 +75,13 @@ class CircularControl: UIControl {
     }
     
     private func angle(from point: CGPoint) -> Int {
-        let unitVector = CGPoint(x: 1, y: 0)
+        let unitVector = CGPoint(x: 0, y: 1)
         let newPointVector = CGPoint(x: point.x - circleCenter.x, y: point.y - circleCenter.y)
         
         let angleInRadians = atan2(newPointVector.y, newPointVector.x) - atan2(unitVector.y, unitVector.x)
         let angleInDegrees = GLKMathRadiansToDegrees(Float(angleInRadians))
         
-        return Int(angleInDegrees)
+        return Int(angleInDegrees + 180)
     }
     
 }
