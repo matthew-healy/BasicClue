@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E001F1560C100BA99AA /* SaveDateViewController.swift */; };
 		28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C522C71F15108700FEA009 /* AppDelegate.swift */; };
-		28C522CA1F15108700FEA009 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C522C91F15108700FEA009 /* ViewController.swift */; };
 		28C522CD1F15108700FEA009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C522CB1F15108700FEA009 /* Main.storyboard */; };
 		28C522CF1F15108700FEA009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C522CE1F15108700FEA009 /* Assets.xcassets */; };
 		28C522D21F15108700FEA009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C522D01F15108700FEA009 /* LaunchScreen.storyboard */; };
@@ -26,9 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		289C7E001F1560C100BA99AA /* SaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDateViewController.swift; sourceTree = "<group>"; };
 		28C522C41F15108700FEA009 /* BasicClue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicClue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C522C71F15108700FEA009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28C522C91F15108700FEA009 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28C522CC1F15108700FEA009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28C522CE1F15108700FEA009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C522D11F15108700FEA009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		289C7DFF1F15602E00BA99AA /* SaveDate */ = {
+			isa = PBXGroup;
+			children = (
+				289C7E001F1560C100BA99AA /* SaveDateViewController.swift */,
+			);
+			path = SaveDate;
+			sourceTree = "<group>";
+		};
 		28C522BB1F15108700FEA009 = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +85,8 @@
 		28C522C61F15108700FEA009 /* BasicClue */ = {
 			isa = PBXGroup;
 			children = (
+				289C7DFF1F15602E00BA99AA /* SaveDate */,
 				28C522C71F15108700FEA009 /* AppDelegate.swift */,
-				28C522C91F15108700FEA009 /* ViewController.swift */,
 				28C522CB1F15108700FEA009 /* Main.storyboard */,
 				28C522CE1F15108700FEA009 /* Assets.xcassets */,
 				28C522D01F15108700FEA009 /* LaunchScreen.storyboard */,
@@ -197,8 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28C522CA1F15108700FEA009 /* ViewController.swift in Sources */,
 				28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */,
+				289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +426,7 @@
 				28C522E31F15108800FEA009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28C522E41F15108800FEA009 /* Build configuration list for PBXNativeTarget "BasicClueTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +435,7 @@
 				28C522E61F15108800FEA009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
