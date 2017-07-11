@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289C7E041F15617700BA99AA /* CircularControlEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E031F15617700BA99AA /* CircularControlEngine.swift */; };
 		28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C522C71F15108700FEA009 /* AppDelegate.swift */; };
 		28C522CA1F15108700FEA009 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C522C91F15108700FEA009 /* ViewController.swift */; };
 		28C522CD1F15108700FEA009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C522CB1F15108700FEA009 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		289C7E031F15617700BA99AA /* CircularControlEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlEngine.swift; sourceTree = "<group>"; };
 		28C522C41F15108700FEA009 /* BasicClue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicClue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C522C71F15108700FEA009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C522C91F15108700FEA009 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				28C522D01F15108700FEA009 /* LaunchScreen.storyboard */,
 				28C522D31F15108700FEA009 /* Info.plist */,
 				28C522E71F1511AF00FEA009 /* CircularControl.swift */,
+				289C7E031F15617700BA99AA /* CircularControlEngine.swift */,
 			);
 			path = BasicClue;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				28C522CA1F15108700FEA009 /* ViewController.swift in Sources */,
 				28C522E81F1511AF00FEA009 /* CircularControl.swift in Sources */,
+				289C7E041F15617700BA99AA /* CircularControlEngine.swift in Sources */,
 				28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +426,7 @@
 				28C522E31F15108800FEA009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28C522E41F15108800FEA009 /* Build configuration list for PBXNativeTarget "BasicClueTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				28C522E61F15108800FEA009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
