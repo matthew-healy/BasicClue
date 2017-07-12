@@ -44,12 +44,20 @@ class CircularControlLayoutEngineTests: XCTestCase {
         let expected = CGPoint(x: 2, y: 0)
         subject = .create(sideLength: 4)
         let result = subject.handlePosition
-        XCTAssertEqual(expected, result.origin)
+        Assert.equal(expected, result.origin, accuracy: 0.01)
+    }
+
+    func test_handlePosition_side4width0_afterTouchingSouth_originIsx2y4() {
+        let expected = CGPoint(x: 2, y: 4)
+        subject = .create(sideLength: 4)
+        subject.updateAngle(for: expected)
+        let result = subject.handlePosition
+        Assert.equal(expected, result.origin, accuracy: 0.01)
     }
 }
 
 extension CircularControlLayoutEngine {
-    static func create(sideLength: Double = 0, lineWidth: Double = 0) -> CircularControlLayoutEngine {
+    static func create(sideLength: CGFloat = 0, lineWidth: CGFloat = 0) -> CircularControlLayoutEngine {
         return CircularControlLayoutEngine(
             sideLength: sideLength,
             lineWidth: lineWidth

@@ -2,10 +2,12 @@ import UIKit
 
 struct CircularControlLayoutEngine {
     private let minimumTouchDimension = 44
-    private let viewSideLength: Double
-    private let outlineWidth: Double
+    private let viewSideLength: CGFloat
+    private let outlineWidth: CGFloat
 
-    var radius: Double {
+    private var angle: CGFloat = 0
+
+    var radius: CGFloat {
         return (viewSideLength / 2) - (2 * outlineWidth)
     }
 
@@ -14,7 +16,11 @@ struct CircularControlLayoutEngine {
     }
 
     var handlePosition: CGRect {
-        let origin = CGPoint(x: 2, y: 0)
+        let angleFromNorth = 3/2 * .pi + angle
+        let origin = CGPoint(
+            x: radius * cos(angleFromNorth) + center.x - outlineWidth,
+            y: radius * sin(angleFromNorth) + center.y - outlineWidth
+        )
         let size = CGSize(
             width: minimumTouchDimension,
             height: minimumTouchDimension
@@ -22,8 +28,12 @@ struct CircularControlLayoutEngine {
         return CGRect(origin: origin, size: size)
     }
 
-    init(sideLength: Double, lineWidth: Double) {
+    init(sideLength: CGFloat, lineWidth: CGFloat) {
         viewSideLength = sideLength
         outlineWidth = lineWidth
+    }
+
+    mutating func updateAngle(for point: CGPoint) {
+        angle = .pi
     }
 }
