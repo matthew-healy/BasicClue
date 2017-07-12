@@ -30,6 +30,22 @@ class CircularControlLayoutEngineTests: XCTestCase {
         subject = .create(sideLength: 15)
         XCTAssertEqual(expeted, subject.center)
     }
+
+    // MARK: handlePosition tests
+
+    func test_handlePosition_sizeIs44By44() {
+        let expected = CGSize(width: 44, height: 44)
+        subject = .create()
+        let result = subject.handlePosition
+        XCTAssertEqual(expected, result.size)
+    }
+
+    func test_handlePosition_side4width0_defaultAngle_originIsx2y0() {
+        let expected = CGPoint(x: 2, y: 0)
+        subject = .create(sideLength: 4)
+        let result = subject.handlePosition
+        XCTAssertEqual(expected, result.origin)
+    }
 }
 
 extension CircularControlLayoutEngine {
