@@ -4,7 +4,11 @@ class CircularControl: UIControl {
     
     private let lineWidth: CGFloat = 22
     private let handleSize = CGSize(width: 44, height: 44)
-    private var engine: CircularControlEngine!
+    private var engine: CircularControlLayoutEngine!
+    
+    var selectedValue: Int {
+        return engine.selectedValue
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,15 +21,16 @@ class CircularControl: UIControl {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        engine = CircularControlEngine(
+        engine = CircularControlLayoutEngine(
             sideLength: bounds.size.width,
-            lineWidth: lineWidth
+            lineWidth: lineWidth,
+            range: 1...31
         )
     }
     
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        setupContextForCircle(context)
+        setUpContextForCircle(context)
         context?.addArc(
             center: engine.center,
             radius: engine.radius,
@@ -37,7 +42,7 @@ class CircularControl: UIControl {
         drawHandle(in: context)
     }
     
-    private func setupContextForCircle(_ context: CGContext?) {
+    private func setUpContextForCircle(_ context: CGContext?) {
         context?.setStrokeColor(UIColor.black.cgColor)
         context?.setLineWidth(lineWidth)
         context?.setLineCap(.butt)
@@ -45,12 +50,12 @@ class CircularControl: UIControl {
     
     private func drawHandle(in context: CGContext?) {
         context?.saveGState()
-        setupContextForHandle(context)
+        setUpContextForHandle(context)
         context?.fillEllipse(in: engine.handleRect)
         context?.restoreGState()
     }
     
-    private func setupContextForHandle(_ context: CGContext?) {
+    private func setUpContextForHandle(_ context: CGContext?) {
         context?.setShadow(offset: .zero, blur: 3, color: UIColor.black.cgColor)
         context?.setFillColor(UIColor.white.cgColor)
     }
@@ -59,6 +64,7 @@ class CircularControl: UIControl {
         super.continueTracking(touch, with: event)
         engine.updateAngle(with: touch.location(in: self))
         setNeedsDisplay()
+        print(engine.selectedValue)
         return true
     }
     

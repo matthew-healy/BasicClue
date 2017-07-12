@@ -1,8 +1,9 @@
 import UIKit
 
-struct CircularControlEngine {
+struct CircularControlLayoutEngine {
     private let lineWidth: CGFloat
     private let sideLength: CGFloat
+    private let range: ClosedRange<Int>
     
     private var angle: CGFloat = 0
     
@@ -14,15 +15,20 @@ struct CircularControlEngine {
         return CGPoint(x: sideLength / 2, y: sideLength / 2)
     }
     
-    init(sideLength: CGFloat, lineWidth: CGFloat) {
+    var selectedValue: Int {
+        return Int(ceil((angle / (2 * .pi)) * CGFloat(range.upperBound)))
+    }
+    
+    init(sideLength: CGFloat, lineWidth: CGFloat, range: ClosedRange<Int>) {
         self.sideLength = sideLength
         self.lineWidth = lineWidth
+        self.range = range
     }
     
     var handleRect: CGRect {
-        let t = 3/2 * .pi + angle // adjust for north = 0
-        let x = radius * cos(t) + center.x - lineWidth
-        let y = radius * sin(t) + center.y - lineWidth
+        let angleFromNorth = 3/2 * .pi + angle
+        let x = radius * cos(angleFromNorth) + center.x - lineWidth
+        let y = radius * sin(angleFromNorth) + center.y - lineWidth
         let origin = CGPoint(x: x, y: y)
         let size = CGSize(width: 44, height: 44)
         return CGRect(origin: origin, size: size)
