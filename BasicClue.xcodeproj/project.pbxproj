@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */; };
 		289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E001F1560C100BA99AA /* SaveDateViewController.swift */; };
-		289C7E071F163AA300BA99AA /* CircularControlLayoutEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E061F163AA300BA99AA /* CircularControlLayoutEngineTests.swift */; };
 		289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E081F163ACA00BA99AA /* CircularControlLayoutEngine.swift */; };
 		289C7E0B1F16510F00BA99AA /* Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E0A1F16510F00BA99AA /* Assert.swift */; };
 		289C7E0D1F165CDA00BA99AA /* CircularControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E0C1F165CDA00BA99AA /* CircularControl.swift */; };
@@ -29,8 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlLayoutEngineTests.swift; sourceTree = "<group>"; };
 		289C7E001F1560C100BA99AA /* SaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDateViewController.swift; sourceTree = "<group>"; };
-		289C7E061F163AA300BA99AA /* CircularControlLayoutEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularControlLayoutEngineTests.swift; path = BasicClueTests/SaveDate/CircularControlLayoutEngineTests.swift; sourceTree = SOURCE_ROOT; };
 		289C7E081F163ACA00BA99AA /* CircularControlLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlLayoutEngine.swift; sourceTree = "<group>"; };
 		289C7E0A1F16510F00BA99AA /* Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assert.swift; sourceTree = "<group>"; };
 		289C7E0C1F165CDA00BA99AA /* CircularControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControl.swift; sourceTree = "<group>"; };
@@ -62,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		285A3F821F166D9D00C7E71C /* SaveDate */ = {
+			isa = PBXGroup;
+			children = (
+				285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */,
+			);
+			path = SaveDate;
+			sourceTree = "<group>";
+		};
 		289C7DFF1F15602E00BA99AA /* SaveDate */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,15 +78,6 @@
 				289C7E0C1F165CDA00BA99AA /* CircularControl.swift */,
 			);
 			path = SaveDate;
-			sourceTree = "<group>";
-		};
-		289C7E051F163A6E00BA99AA /* SaveDate */ = {
-			isa = PBXGroup;
-			children = (
-				289C7E061F163AA300BA99AA /* CircularControlLayoutEngineTests.swift */,
-			);
-			name = SaveDate;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		28C522BB1F15108700FEA009 = {
@@ -115,7 +114,7 @@
 		28C522DB1F15108700FEA009 /* BasicClueTests */ = {
 			isa = PBXGroup;
 			children = (
-				289C7E051F163A6E00BA99AA /* SaveDate */,
+				285A3F821F166D9D00C7E71C /* SaveDate */,
 				28C522DE1F15108800FEA009 /* Info.plist */,
 				289C7E0A1F16510F00BA99AA /* Assert.swift */,
 			);
@@ -235,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				289C7E071F163AA300BA99AA /* CircularControlLayoutEngineTests.swift in Sources */,
+				285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */,
 				289C7E0B1F16510F00BA99AA /* Assert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
