@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E001F1560C100BA99AA /* SaveDateViewController.swift */; };
+		289C7E071F163AA300BA99AA /* CircularControlLayoutEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E061F163AA300BA99AA /* CircularControlLayoutEngineTests.swift */; };
+		289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E081F163ACA00BA99AA /* CircularControlLayoutEngine.swift */; };
 		28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C522C71F15108700FEA009 /* AppDelegate.swift */; };
 		28C522CD1F15108700FEA009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C522CB1F15108700FEA009 /* Main.storyboard */; };
 		28C522CF1F15108700FEA009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C522CE1F15108700FEA009 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		289C7E001F1560C100BA99AA /* SaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDateViewController.swift; sourceTree = "<group>"; };
+		289C7E061F163AA300BA99AA /* CircularControlLayoutEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularControlLayoutEngineTests.swift; path = BasicClueTests/SaveDate/CircularControlLayoutEngineTests.swift; sourceTree = SOURCE_ROOT; };
+		289C7E081F163ACA00BA99AA /* CircularControlLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlLayoutEngine.swift; sourceTree = "<group>"; };
 		28C522C41F15108700FEA009 /* BasicClue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicClue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C522C71F15108700FEA009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C522CC1F15108700FEA009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,8 +62,18 @@
 			isa = PBXGroup;
 			children = (
 				289C7E001F1560C100BA99AA /* SaveDateViewController.swift */,
+				289C7E081F163ACA00BA99AA /* CircularControlLayoutEngine.swift */,
 			);
 			path = SaveDate;
+			sourceTree = "<group>";
+		};
+		289C7E051F163A6E00BA99AA /* SaveDate */ = {
+			isa = PBXGroup;
+			children = (
+				289C7E061F163AA300BA99AA /* CircularControlLayoutEngineTests.swift */,
+			);
+			name = SaveDate;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		28C522BB1F15108700FEA009 = {
@@ -96,6 +110,7 @@
 		28C522DB1F15108700FEA009 /* BasicClueTests */ = {
 			isa = PBXGroup;
 			children = (
+				289C7E051F163A6E00BA99AA /* SaveDate */,
 				28C522DE1F15108800FEA009 /* Info.plist */,
 			);
 			path = BasicClueTests;
@@ -154,6 +169,7 @@
 					};
 					28C522D71F15108700FEA009 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						TestTargetID = 28C522C31F15108700FEA009;
 					};
 				};
@@ -203,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */,
+				289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */,
 				289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289C7E071F163AA300BA99AA /* CircularControlLayoutEngineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +396,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BasicClueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.liamhealy.matthew.BasicClueTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BasicClue.app/BasicClue";
@@ -393,6 +413,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BasicClueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.liamhealy.matthew.BasicClueTests;
