@@ -4,6 +4,10 @@ class CircularControl: UIControl {
     private let lineWidth: CGFloat = 22
     private var engine: CircularControlLayoutEngine!
 
+    var selectedValue: Int {
+        return engine.selectedValue
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
