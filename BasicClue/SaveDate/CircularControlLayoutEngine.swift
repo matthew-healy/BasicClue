@@ -8,7 +8,7 @@ struct CircularControlLayoutEngine {
     private var angle: CGFloat = 0
 
     var radius: CGFloat {
-        return (viewSideLength / 2) - (2 * outlineWidth)
+        return (viewSideLength / 2) - outlineWidth
     }
 
     var center: CGPoint {
@@ -16,7 +16,7 @@ struct CircularControlLayoutEngine {
     }
 
     var handlePosition: CGRect {
-        let angleFromNorth = 3/2 * .pi + angle
+        let angleFromNorth = (3/2) * .pi + angle
         let origin = CGPoint(
             x: radius * cos(angleFromNorth) + center.x - outlineWidth,
             y: radius * sin(angleFromNorth) + center.y - outlineWidth
@@ -34,6 +34,9 @@ struct CircularControlLayoutEngine {
     }
 
     mutating func updateAngle(for point: CGPoint) {
-        angle = .pi
+        let unit = CGPoint(x: 0, y: 1)
+        let difference = CGPoint(x: center.x - point.x, y: center.y - point.y)
+        let result = atan2(difference.y, difference.x) - atan2(unit.y, unit.x)
+        angle = result > 0 ? result : result + 2 * .pi
     }
 }

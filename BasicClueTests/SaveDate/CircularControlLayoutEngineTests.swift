@@ -7,14 +7,14 @@ class CircularControlLayoutEngineTests: XCTestCase {
 
     // MARK: radius tests
 
-    func test_radius_sideLength10lineWidth1_returns3() {
+    func test_radius_sideLength10lineWidth1_returns4() {
         subject = .create(sideLength: 10, lineWidth: 1)
-        XCTAssertEqual(3, subject.radius)
+        XCTAssertEqual(4, subject.radius)
     }
 
-    func test_radius_sideLength40lineWidth3_returns14() {
+    func test_radius_sideLength40lineWidth3_returns17() {
         subject = .create(sideLength: 40, lineWidth: 3)
-        XCTAssertEqual(14, subject.radius)
+        XCTAssertEqual(17, subject.radius)
     }
 
     // MARK: center tests
@@ -51,6 +51,14 @@ class CircularControlLayoutEngineTests: XCTestCase {
         let expected = CGPoint(x: 2, y: 4)
         subject = .create(sideLength: 4)
         subject.updateAngle(for: expected)
+        let result = subject.handlePosition
+        Assert.equal(expected, result.origin, accuracy: 0.01)
+    }
+
+    func test_handlePosition_side100width22_afterTouchingWestOutsideCircleButNotOnCircle_originIsx0y28() {
+        let expected = CGPoint(x: 0, y: 28)
+        subject = .create(sideLength: 100, lineWidth: 22)
+        subject.updateAngle(for: CGPoint(x: 0, y: 50))
         let result = subject.handlePosition
         Assert.equal(expected, result.origin, accuracy: 0.01)
     }
