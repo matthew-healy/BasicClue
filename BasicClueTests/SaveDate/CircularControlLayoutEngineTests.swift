@@ -26,9 +26,28 @@ class CircularControlLayoutEngineTests: XCTestCase {
     }
 
     func test_center_sideLength155_returns_x7point5y7point5() {
-        let expeted = CGPoint(x: 7.5, y: 7.5)
+        let expected = CGPoint(x: 7.5, y: 7.5)
         subject = .create(sideLength: 15)
-        XCTAssertEqual(expeted, subject.center)
+        XCTAssertEqual(expected, subject.center)
+    }
+
+    // MARK: selectedValue tests
+
+    func test_selectedValue_side4rangeIs1To4_initialValueIs1() {
+        subject = .create(sideLength: 4)
+        XCTAssertEqual(1, subject.selectedValue)
+    }
+
+    func test_selectedValue_side4width0range1To4_touchingSouthWest_selectedValueIs3() {
+        subject = .create(sideLength: 4)
+        subject.updateAngle(for: CGPoint(x: 0, y: 4))
+        XCTAssertEqual(3, subject.selectedValue)
+    }
+
+    func test_selectedValue_side4width0range1To4_touchingMarginallyWestOfNorth_selectedValueIs4() {
+        subject = .create(sideLength: 4)
+        subject.updateAngle(for: CGPoint(x: 1.999999, y: 0))
+        XCTAssertEqual(4, subject.selectedValue)
     }
 
     // MARK: handlePosition tests
@@ -65,10 +84,15 @@ class CircularControlLayoutEngineTests: XCTestCase {
 }
 
 extension CircularControlLayoutEngine {
-    static func create(sideLength: CGFloat = 0, lineWidth: CGFloat = 0) -> CircularControlLayoutEngine {
+    static func create(
+        sideLength: CGFloat = 0,
+        lineWidth: CGFloat = 0,
+        range: ClosedRange<Int> = 1...4
+    ) -> CircularControlLayoutEngine {
         return CircularControlLayoutEngine(
             sideLength: sideLength,
-            lineWidth: lineWidth
+            lineWidth: lineWidth,
+            range: range
         )
     }
 }

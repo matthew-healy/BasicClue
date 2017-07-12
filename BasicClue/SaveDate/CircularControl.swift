@@ -23,7 +23,8 @@ class CircularControl: UIControl {
         super.layoutSubviews()
         engine = CircularControlLayoutEngine(
             sideLength: bounds.size.width,
-            lineWidth: lineWidth
+            lineWidth: lineWidth,
+            range: 1...4
         )
     }
 
