@@ -36,9 +36,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEH-vM-oDZ" userLabel="ContentSpacerView">
-                                <rect key="frame" x="-1" y="32" width="375" height="667"/>
+                                <rect key="frame" x="-1" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIO-va-aRn" userLabel="CircularControl">
+                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="aIO-va-aRn" userLabel="CircularControl" customClass="CircularControl" customModule="BasicClue" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="375" height="375"/>
                                         <color key="backgroundColor" red="0.99607849000000004" green="0.1868714769" blue="0.90657616649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -46,10 +46,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-ME-BnD" userLabel="ButtonSpacerView">
-                                        <rect key="frame" x="0.0" y="439" width="375" height="228"/>
+                                        <rect key="frame" x="0.0" y="439" width="375" height="164"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNo-7f-92U" userLabel="CalendarButton">
-                                                <rect key="frame" x="164.5" y="99" width="46" height="30"/>
+                                                <rect key="frame" x="164.5" y="67" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <segue destination="3Sw-VG-vpt" kind="show" id="HxZ-4L-9yW"/>
@@ -78,9 +78,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dfo-r6-DYX" firstAttribute="leading" secondItem="AEH-vM-oDZ" secondAttribute="leading" constant="0.5" id="KpL-IM-iZP"/>
-                            <constraint firstItem="Dfo-r6-DYX" firstAttribute="top" secondItem="AEH-vM-oDZ" secondAttribute="top" constant="32" id="ZqL-Hh-jsE"/>
+                            <constraint firstItem="Dfo-r6-DYX" firstAttribute="top" secondItem="AEH-vM-oDZ" secondAttribute="top" id="ZqL-Hh-jsE"/>
                             <constraint firstItem="Dfo-r6-DYX" firstAttribute="trailing" secondItem="AEH-vM-oDZ" secondAttribute="trailing" constant="0.5" id="aw6-MV-8zy"/>
-                            <constraint firstItem="AEH-vM-oDZ" firstAttribute="bottom" secondItem="Dfo-r6-DYX" secondAttribute="bottom" constant="32" id="cIj-ga-uEA"/>
+                            <constraint firstItem="AEH-vM-oDZ" firstAttribute="bottom" secondItem="Dfo-r6-DYX" secondAttribute="bottom" id="cIj-ga-uEA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dfo-r6-DYX"/>
                     </view>
