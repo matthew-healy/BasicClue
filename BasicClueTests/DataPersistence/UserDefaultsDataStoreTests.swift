@@ -11,6 +11,13 @@ class UserDefaultsDataStoreTests: XCTestCase {
         subject = UserDefaultsDataStore(userDefaults: mockDefaults)
     }
 
+    // MARK: getDateList tests
+
+    func test_getDateList_passesDateListKeyToUserDefaults() {
+        _ = subject.getDateList()
+        XCTAssertEqual("dateList", mockDefaults.spyDataKey)
+    }
+
     func test_getDateList_defaultsReturnsNil_returnsEmptyArray() {
         let result = subject.getDateList()
         XCTAssertEqual(result, [])
