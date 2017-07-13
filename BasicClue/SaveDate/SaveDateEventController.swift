@@ -7,6 +7,11 @@ class SaveDateEventController {
         self.presenter = presenter
     }
 
+    func interfaceDidLoad() {
+        let firstDay = 1
+        presenter.present(day: firstDay)
+    }
+
     func selected(date: Int) {
         presenter.present(day: date)
     }

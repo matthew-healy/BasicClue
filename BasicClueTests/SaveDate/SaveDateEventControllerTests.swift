@@ -11,6 +11,13 @@ class SaveDateEventControllerTests: XCTestCase {
         subject = SaveDateEventController(presenter: mockPresenter)
     }
     
+    // MARK: interfaceDidLoad tests
+
+    func test_interfaceDidLoad_tellsPresenterToPresentDay1() {
+        subject.interfaceDidLoad()
+        XCTAssertEqual(1, mockPresenter.spyPresentedDay)
+    }
+
     // MARK: selected(date:) tests
 
     func test_selectedDate_tellsPresenterToPresentDay() {
