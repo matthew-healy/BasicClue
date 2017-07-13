@@ -11,6 +11,18 @@ class SaveDatePresenterTests: XCTestCase {
         subject = SaveDatePresenter(view: mockView)
     }
 
+    // MARK: setUpScreen tests
+
+    func test_setUpScreen_setsCalendarButtonTitle() {
+        subject.setUpScreen()
+        XCTAssertTrue(mockView.didSetCalendarButtonTitle)
+    }
+
+    func test_setUpScreen_setsCalendarButtonTitleCorrectly() {
+        subject.setUpScreen()
+        XCTAssertEqual("Calendar", mockView.spyCalendarButtonTitle)
+    }
+
     // MARK: presentSelectedDay tests
 
     func test_presentDay_callsDisplayViewModelOnViewDelegate() {

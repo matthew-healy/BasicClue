@@ -8,6 +8,7 @@ class SaveDateEventController {
     }
 
     func interfaceDidLoad() {
+        presenter.setUpScreen()
         let firstDay = 1
         presenter.present(day: firstDay)
     }

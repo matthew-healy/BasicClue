@@ -103,6 +103,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="34X-uI-j6A"/>
                     <connections>
+                        <outlet property="calendarButton" destination="TNo-7f-92U" id="8AO-RG-3uM"/>
                         <outlet property="saveDateButton" destination="3M4-rA-dDP" id="zxt-B8-eOz"/>
                     </connections>
                 </viewController>

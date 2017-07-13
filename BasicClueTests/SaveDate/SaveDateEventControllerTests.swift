@@ -13,6 +13,11 @@ class SaveDateEventControllerTests: XCTestCase {
     
     // MARK: interfaceDidLoad tests
 
+    func test_interfaceDidLoad_tellsPresenterToSetUpScreen() {
+        subject.interfaceDidLoad()
+        XCTAssertTrue(mockPresenter.didSetUpScreen)
+    }
+
     func test_interfaceDidLoad_tellsPresenterToPresentDay1() {
         subject.interfaceDidLoad()
         XCTAssertEqual(1, mockPresenter.spyPresentedDay)

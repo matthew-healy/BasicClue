@@ -5,6 +5,7 @@ class SaveDateViewController: UIViewController {
     private var eventController: SaveDateEventController? = nil
 
     @IBOutlet weak var saveDateButton: UIButton!
+    @IBOutlet weak var calendarButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,10 @@ class SaveDateViewController: UIViewController {
 }
 
 extension SaveDateViewController: SaveDateViewing {
+    func setCalendarButtonTitle(to title: String) {
+        calendarButton.setTitle(title, for: .normal)
+    }
+
     func display(viewModel: String) {
         saveDateButton.setTitle(viewModel, for: .normal)
     }
