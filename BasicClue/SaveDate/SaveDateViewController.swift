@@ -9,6 +9,7 @@ class SaveDateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpWireframe()
+        eventController?.interfaceDidLoad()
         saveDateButton.layer.masksToBounds = true
     }
 
