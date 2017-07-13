@@ -1,6 +1,6 @@
 import Foundation
 
-class SaveDatePresenter {
+class SaveDatePresenter: SaveDatePresenting {
     private let month = "January"
     private unowned let view: SaveDateViewDelegate
 
