@@ -2,9 +2,9 @@ import Foundation
 
 class SaveDatePresenter: SaveDatePresenting {
     private let month = "January"
-    private unowned let view: SaveDateViewDelegate
+    private unowned let view: SaveDateViewing
 
-    init(view: SaveDateViewDelegate) {
+    init(view: SaveDateViewing) {
         self.view = view
     }
 
