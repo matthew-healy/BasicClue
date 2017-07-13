@@ -28,7 +28,7 @@ class CircularControl: UIControl {
         engine = CircularControlLayoutEngine(
             sideLength: bounds.size.width,
             lineWidth: lineWidth,
-            range: 1...4
+            range: 1...31
         )
     }
 
@@ -65,8 +65,12 @@ class CircularControl: UIControl {
 
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         super.continueTracking(touch, with: event)
+        let oldValue = selectedValue
         engine.updateAngle(for: touch.location(in: self))
         setNeedsDisplay()
+        if selectedValue != oldValue {
+            sendActions(for: .valueChanged)
+        }
         return true
     }
 }

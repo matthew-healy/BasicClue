@@ -58,6 +58,9 @@
                                             <constraint firstItem="3M4-rA-dDP" firstAttribute="centerY" secondItem="aIO-va-aRn" secondAttribute="centerY" id="FhN-bX-bjX"/>
                                             <constraint firstAttribute="width" secondItem="aIO-va-aRn" secondAttribute="height" multiplier="1:1" id="ixs-bL-r59"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="circularControlValueDidChange:" destination="ugD-Br-AZf" eventType="valueChanged" id="991-hQ-uNd"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-ME-BnD" userLabel="ButtonSpacerView">
                                         <rect key="frame" x="0.0" y="439" width="375" height="164"/>
