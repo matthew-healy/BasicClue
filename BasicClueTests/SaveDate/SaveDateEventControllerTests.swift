@@ -30,12 +30,12 @@ class SaveDateEventControllerTests: XCTestCase {
         XCTAssertTrue(mockPresenter.didPresentDay)
     }
     
-    func test_dateSelected_1_presentsDay15() {
+    func test_selectedDate_1_presentsDay15() {
         subject.selected(date: 1)
         XCTAssertEqual(1, mockPresenter.spyPresentedDay)
     }
     
-    func test_dateSelected_15_presentsDay15() {
+    func test_selectedDate_15_presentsDay15() {
         subject.selected(date: 15)
         XCTAssertEqual(15, mockPresenter.spyPresentedDay)
     }
