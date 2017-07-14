@@ -22,6 +22,8 @@
 		285A3FA01F17CA8700C7E71C /* MockUserDefaulting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F9F1F17CA8700C7E71C /* MockUserDefaulting.swift */; };
 		2880B2671F18B7C400883B6D /* SaveDateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880B2661F18B7C400883B6D /* SaveDateInteractor.swift */; };
 		2880B2691F18B7D200883B6D /* SaveDateInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880B2681F18B7D200883B6D /* SaveDateInteractorTests.swift */; };
+		2880B26B1F18B86F00883B6D /* DataStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880B26A1F18B86F00883B6D /* DataStoring.swift */; };
+		2880B26D1F18B8B200883B6D /* MockDataStoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880B26C1F18B8B200883B6D /* MockDataStoring.swift */; };
 		289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E001F1560C100BA99AA /* SaveDateViewController.swift */; };
 		289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E081F163ACA00BA99AA /* CircularControlLayoutEngine.swift */; };
 		289C7E0B1F16510F00BA99AA /* Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289C7E0A1F16510F00BA99AA /* Assert.swift */; };
@@ -58,6 +60,8 @@
 		285A3F9F1F17CA8700C7E71C /* MockUserDefaulting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaulting.swift; sourceTree = "<group>"; };
 		2880B2661F18B7C400883B6D /* SaveDateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDateInteractor.swift; sourceTree = "<group>"; };
 		2880B2681F18B7D200883B6D /* SaveDateInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDateInteractorTests.swift; sourceTree = "<group>"; };
+		2880B26A1F18B86F00883B6D /* DataStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoring.swift; sourceTree = "<group>"; };
+		2880B26C1F18B8B200883B6D /* MockDataStoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataStoring.swift; sourceTree = "<group>"; };
 		289C7E001F1560C100BA99AA /* SaveDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDateViewController.swift; sourceTree = "<group>"; };
 		289C7E081F163ACA00BA99AA /* CircularControlLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlLayoutEngine.swift; sourceTree = "<group>"; };
 		289C7E0A1F16510F00BA99AA /* Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assert.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				285A3F981F17B02700C7E71C /* UserDefaultsDataStore.swift */,
 				285A3F9D1F17C81200C7E71C /* UserDefaulting.swift */,
+				2880B26A1F18B86F00883B6D /* DataStoring.swift */,
 			);
 			path = DataPersistence;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				285A3F9B1F17B06000C7E71C /* UserDefaultsDataStoreTests.swift */,
 				285A3F9F1F17CA8700C7E71C /* MockUserDefaulting.swift */,
+				2880B26C1F18B8B200883B6D /* MockDataStoring.swift */,
 			);
 			path = DataPersistence;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				285A3F9E1F17C81200C7E71C /* UserDefaulting.swift in Sources */,
 				285A3F921F177A8000C7E71C /* SaveDateEventController.swift in Sources */,
 				285A3F991F17B02700C7E71C /* UserDefaultsDataStore.swift in Sources */,
+				2880B26B1F18B86F00883B6D /* DataStoring.swift in Sources */,
 				28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */,
 				289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */,
 				2880B2671F18B7C400883B6D /* SaveDateInteractor.swift in Sources */,
@@ -301,6 +308,7 @@
 			files = (
 				285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */,
 				2880B2691F18B7D200883B6D /* SaveDateInteractorTests.swift in Sources */,
+				2880B26D1F18B8B200883B6D /* MockDataStoring.swift in Sources */,
 				285A3F941F177E8900C7E71C /* MockSaveDatePresenter.swift in Sources */,
 				285A3F901F177A6C00C7E71C /* SaveDateEventControllerTests.swift in Sources */,
 				285A3F8A1F17757000C7E71C /* SaveDatePresenterTests.swift in Sources */,

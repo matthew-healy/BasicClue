@@ -1,6 +1,6 @@
 import Foundation
 
-class UserDefaultsDataStore {
+class UserDefaultsDataStore: DataStoring {
     private let dateListKey = "dateList"
     private let defaults: UserDefaulting
 
