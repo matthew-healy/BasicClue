@@ -49,4 +49,36 @@ class UserDefaultsDataStoreTests: XCTestCase {
         XCTAssertEqual(result, expected)
     }
     
+    // MARK: appendToDateList tests
+
+    func test_appendToDateList_usesCorrectDefaultsKey() {
+        subject.appendToDateList(newDate: "")
+        XCTAssertEqual("dateList", mockDefaults.spySetKey)
+    }
+
+    func test_appendToDateList_abc_listIsEmpty_addsAbcToList() throws {
+        mockDefaults.stubData = try data(fromList: [])
+        subject.appendToDateList(newDate: "abc")
+        let spyValue = try Assert.notNilAndUnwrap(typedValue())
+        XCTAssertEqual(["abc"], spyValue)
+    }
+
+    private func typedValue() -> [String]? {
+        return mockDefaults.spyValue as? [String]
+    }
+
+    func test_appendToDateList_def_listIsEmpty_addsDefToList() throws {
+        mockDefaults.stubData = try data(fromList: [])
+        subject.appendToDateList(newDate: "def")
+        let spyValue = try Assert.notNilAndUnwrap(typedValue())
+        XCTAssertEqual(["def"], spyValue)
+    }
+
+    func test_appendToDateList_hello_listNonEmpty_contentsRemain() throws {
+        mockDefaults.stubData = try data(fromList: ["abc", "def"])
+        subject.appendToDateList(newDate: "hello")
+        let spyValue = try Assert.notNilAndUnwrap(typedValue())
+        XCTAssertEqual(["abc", "def", "hello"], spyValue)
+    }
+
 }

@@ -16,4 +16,10 @@ class UserDefaultsDataStore {
         return result
     }
 
+    func appendToDateList(newDate: String) {
+        var list = getDateList()
+        list.append(newDate)
+        defaults.set(list, forKey: dateListKey)
+    }
+
 }
