@@ -1,4 +1,4 @@
-class SaveDateInteractor {
+class SaveDateInteractor: SaveDateInteracting {
     private let dataStore: DataStoring
 
     init(dataStore: DataStoring) {
