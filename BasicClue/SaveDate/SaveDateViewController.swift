@@ -27,6 +27,10 @@ class SaveDateViewController: UIViewController {
     @IBAction func circularControlValueDidChange(_ sender: CircularControl) {
         eventController?.selected(date: sender.selectedValue)
     }
+
+    @IBAction func didPressDateButton(_ sender: UIButton) {
+
+    }
 }
 
 extension SaveDateViewController: SaveDateViewing {
