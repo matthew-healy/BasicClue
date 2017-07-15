@@ -60,25 +60,30 @@ class UserDefaultsDataStoreTests: XCTestCase {
         mockDefaults.stubData = try data(fromList: [])
         subject.appendToDateList(newDate: "abc")
         let spyValue = try Assert.notNilAndUnwrap(typedValue())
-        XCTAssertEqual(["abc"], spyValue)
+        XCTAssertEqual(try data(from: ["abc"]), spyValue)
     }
 
-    private func typedValue() -> [String]? {
-        return mockDefaults.spyValue as? [String]
+    private func typedValue() -> Data? {
+        return mockDefaults.spyValue as? Data
+    }
+
+    private func data(from list: [String]) throws -> Data {
+        let encoder = JSONEncoder()
+        return try encoder.encode(list)
     }
 
     func test_appendToDateList_def_listIsEmpty_addsDefToList() throws {
         mockDefaults.stubData = try data(fromList: [])
         subject.appendToDateList(newDate: "def")
         let spyValue = try Assert.notNilAndUnwrap(typedValue())
-        XCTAssertEqual(["def"], spyValue)
+        XCTAssertEqual(try data(from: ["def"]), spyValue)
     }
 
     func test_appendToDateList_hello_listNonEmpty_contentsRemain() throws {
         mockDefaults.stubData = try data(fromList: ["abc", "def"])
         subject.appendToDateList(newDate: "hello")
         let spyValue = try Assert.notNilAndUnwrap(typedValue())
-        XCTAssertEqual(["abc", "def", "hello"], spyValue)
+        XCTAssertEqual(try data(from: ["abc", "def", "hello"]), spyValue)
     }
 
 }

@@ -19,7 +19,9 @@ class UserDefaultsDataStore: DataStoring {
     func appendToDateList(newDate: String) {
         var list = getDateList()
         list.append(newDate)
-        defaults.set(list, forKey: dateListKey)
+        let encoder = JSONEncoder()
+        guard let value = try? encoder.encode(list) else { return }
+        defaults.set(value, forKey: dateListKey)
     }
 
 }
