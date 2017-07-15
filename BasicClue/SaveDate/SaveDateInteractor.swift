@@ -5,7 +5,8 @@ class SaveDateInteractor: SaveDateInteracting {
         self.dataStore = dataStore
     }
 
-    func saveDate(_ date: String) {
-        dataStore.appendToDateList(newDate: date)
+    func saveDate(_ date: Int) {
+        let fullDate = "January \(date)"
+        dataStore.appendToDateList(newDate: fullDate)
     }
 }

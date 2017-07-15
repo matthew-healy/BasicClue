@@ -12,18 +12,18 @@ class SaveDateInteractorTests: XCTestCase {
     }
 
     func test_saveDate_appendsToDateList() {
-        subject.saveDate("")
+        subject.saveDate(0)
         XCTAssertTrue(mockStore.didAppendToDateList)
     }
 
-    func test_saveDate_abc_appendsAbcToDateList() {
-        subject.saveDate("abc")
-        XCTAssertEqual("abc", mockStore.spyNewDate)
+    func test_saveDate_1_appendsJanuary1ToDateList() {
+        subject.saveDate(1)
+        XCTAssertEqual("January 1", mockStore.spyNewDate)
     }
 
-    func test_saveDate_def_appendsDefToDateList() {
-        subject.saveDate("def")
-        XCTAssertEqual("def", mockStore.spyNewDate)
+    func test_saveDate_305_appendsJanuary305ToDateList() {
+        subject.saveDate(305)
+        XCTAssertEqual("January 305", mockStore.spyNewDate)
     }
     
 }

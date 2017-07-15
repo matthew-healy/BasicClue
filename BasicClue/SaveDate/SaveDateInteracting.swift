@@ -1,3 +1,3 @@
 protocol SaveDateInteracting {
-    func saveDate(_ date: String)
+    func saveDate(_ date: Int)
 }
