@@ -16,7 +16,9 @@ class SaveDateViewController: UIViewController {
 
     private func setUpWireframe() {
         let presenter = SaveDatePresenter(view: self)
-        eventController = SaveDateEventController(presenter: presenter)
+        let dataStore = UserDefaultsDataStore(userDefaults: UserDefaults.standard)
+        let interactor = SaveDateInteractor(dataStore: dataStore)
+        eventController = SaveDateEventController(presenter: presenter, interactor: interactor)
     }
 
     override func viewDidLayoutSubviews() {

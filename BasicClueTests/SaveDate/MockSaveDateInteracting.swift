@@ -1,9 +1,10 @@
-//
-//  MockSaveDateInteracting.swift
-//  BasicClueTests
-//
-//  Created by Matthew Healy on 14.07.17.
-//  Copyright © 2017 Matthew Healy. All rights reserved.
-//
+@testable import BasicClue
 
-import Foundation
+class MockSaveDateInteracting: SaveDateInteracting {
+    var didSaveDate = false
+    var spySavedDate: Int? = nil
+    func saveDate(_ date: Int) {
+        didSaveDate = true
+        spySavedDate = date
+    }
+}

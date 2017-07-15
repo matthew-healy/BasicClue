@@ -2,9 +2,11 @@ import Foundation
 
 class SaveDateEventController {
     private let presenter: SaveDatePresenting
+    private let interactor: SaveDateInteracting
 
-    init(presenter: SaveDatePresenting) {
+    init(presenter: SaveDatePresenting, interactor: SaveDateInteracting) {
         self.presenter = presenter
+        self.interactor = interactor
     }
 
     func interfaceDidLoad() {
@@ -15,5 +17,9 @@ class SaveDateEventController {
 
     func selected(date: Int) {
         presenter.present(day: date)
+    }
+
+    func saveDateButtonTapped(date: Int) {
+        interactor.saveDate(date)
     }
 }
