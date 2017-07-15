@@ -31,7 +31,7 @@ class SaveDateViewController: UIViewController {
     }
 
     @IBAction func didPressDateButton(_ sender: UIButton) {
-
+        eventController?.saveDateButtonTapped()
     }
 }
 

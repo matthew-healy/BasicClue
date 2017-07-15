@@ -48,17 +48,19 @@ class SaveDateEventControllerTests: XCTestCase {
     // MARK: saveDateButtonTapped(date:) tests
 
     func test_saveDateButtonTapped_savesDate() {
-        subject.saveDateButtonTapped(date: 1)
+        subject.saveDateButtonTapped()
         XCTAssertTrue(mockInteractor.didSaveDate)
     }
 
-    func test_saveDateButtonTapped_2_saves2() {
-        subject.saveDateButtonTapped(date: 2)
+    func test_saveDateButtonTapped_2selected_saves2() {
+        subject.selected(date: 2)
+        subject.saveDateButtonTapped()
         XCTAssertEqual(2, mockInteractor.spySavedDate)
     }
 
-    func test_saveDateButtonTapped_5_saves5() {
-        subject.saveDateButtonTapped(date: 5)
+    func test_saveDateButtonTapped_5selected_saves5() {
+        subject.selected(date: 5)
+        subject.saveDateButtonTapped()
         XCTAssertEqual(5, mockInteractor.spySavedDate)
     }
 
