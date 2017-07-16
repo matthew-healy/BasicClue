@@ -1,4 +1,4 @@
 protocol SaveDateInteracting {
-    func saveDate(_ date: Int)
+    func toggleDateSelection(_ date: Int)
     func isDateSelected(_ date: Int) -> Bool
 }
