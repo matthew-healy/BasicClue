@@ -12,6 +12,8 @@
 		280225A61F1B705F0077D33A /* ViewDatesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225A51F1B705F0077D33A /* ViewDatesInteractorTests.swift */; };
 		280225A81F1B72270077D33A /* ViewDatesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225A71F1B72270077D33A /* ViewDatesPresenterTests.swift */; };
 		280225AA1F1B72430077D33A /* ViewDatesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225A91F1B72430077D33A /* ViewDatesPresenter.swift */; };
+		280225AC1F1BB2560077D33A /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225AB1F1BB2560077D33A /* DateViewModel.swift */; };
+		280225AE1F1BB2640077D33A /* DateViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225AD1F1BB2640077D33A /* DateViewModelTests.swift */; };
 		285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */; };
 		285A3F881F17756400C7E71C /* SaveDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F871F17756400C7E71C /* SaveDatePresenter.swift */; };
 		285A3F8A1F17757000C7E71C /* SaveDatePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F891F17757000C7E71C /* SaveDatePresenterTests.swift */; };
@@ -65,6 +67,8 @@
 		280225A51F1B705F0077D33A /* ViewDatesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesInteractorTests.swift; sourceTree = "<group>"; };
 		280225A71F1B72270077D33A /* ViewDatesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesPresenterTests.swift; sourceTree = "<group>"; };
 		280225A91F1B72430077D33A /* ViewDatesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesPresenter.swift; sourceTree = "<group>"; };
+		280225AB1F1BB2560077D33A /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		280225AD1F1BB2640077D33A /* DateViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModelTests.swift; sourceTree = "<group>"; };
 		285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlLayoutEngineTests.swift; sourceTree = "<group>"; };
 		285A3F871F17756400C7E71C /* SaveDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDatePresenter.swift; sourceTree = "<group>"; };
 		285A3F891F17757000C7E71C /* SaveDatePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDatePresenterTests.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				285A3F931F177E8800C7E71C /* MockSaveDatePresenter.swift */,
 				2880B2681F18B7D200883B6D /* SaveDateInteractorTests.swift */,
 				2880B2701F18BBC700883B6D /* MockSaveDateInteracting.swift */,
+				280225AD1F1BB2640077D33A /* DateViewModelTests.swift */,
 			);
 			path = SaveDate;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				285A3F951F177EEA00C7E71C /* SaveDatePresenting.swift */,
 				2880B2661F18B7C400883B6D /* SaveDateInteractor.swift */,
 				2880B26E1F18BB0A00883B6D /* SaveDateInteracting.swift */,
+				280225AB1F1BB2560077D33A /* DateViewModel.swift */,
 			);
 			path = SaveDate;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				3454257B1F1B7A8000557D89 /* ViewDatesPresenting.swift in Sources */,
 				289C7E0D1F165CDA00BA99AA /* CircularControl.swift in Sources */,
 				285A3F881F17756400C7E71C /* SaveDatePresenter.swift in Sources */,
+				280225AC1F1BB2560077D33A /* DateViewModel.swift in Sources */,
 				289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */,
 				285A3F961F177EEA00C7E71C /* SaveDatePresenting.swift in Sources */,
 			);
@@ -391,6 +398,7 @@
 				285A3F8C1F17762500C7E71C /* MockSaveDateViewDelegate.swift in Sources */,
 				3454257D1F1B7AB500557D89 /* MockViewDatesPresenting.swift in Sources */,
 				289C7E0B1F16510F00BA99AA /* Assert.swift in Sources */,
+				280225AE1F1BB2640077D33A /* DateViewModelTests.swift in Sources */,
 				285A3FA01F17CA8700C7E71C /* MockUserDefaulting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
