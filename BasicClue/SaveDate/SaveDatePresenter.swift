@@ -14,7 +14,8 @@ class SaveDatePresenter: SaveDatePresenting {
     }
 
     func present(day: Int) {
-        view.display(viewModel: "\(month) \(day)")
+        let viewModel = DateViewModel(day: "\(month) \(day)", isSelected: false)
+        view.display(viewModel: viewModel)
     }
 
 }

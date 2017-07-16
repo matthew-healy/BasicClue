@@ -9,8 +9,8 @@ class MockSaveDateViewDelegate: SaveDateViewing {
     }
 
     var didCallDisplayViewModel = false
-    var spyDisplayViewModel: String? = nil
-    func display(viewModel: String) {
+    var spyDisplayViewModel: DateViewModel? = nil
+    func display(viewModel: DateViewModel) {
         didCallDisplayViewModel = true
         spyDisplayViewModel = viewModel
     }

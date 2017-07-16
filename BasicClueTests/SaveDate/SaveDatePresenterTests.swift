@@ -32,12 +32,12 @@ class SaveDatePresenterTests: XCTestCase {
 
     func test_presentDay_day1_displaysJanuary1() {
         subject.present(day: 1)
-        XCTAssertEqual("January 1", mockView.spyDisplayViewModel)
+        XCTAssertEqual("January 1", mockView.spyDisplayViewModel?.day)
     }
 
     func test_presentDay_day31_displaysJanuary31() {
         subject.present(day: 31)
-        XCTAssertEqual("January 31", mockView.spyDisplayViewModel)
+        XCTAssertEqual("January 31", mockView.spyDisplayViewModel?.day)
     }
     
 }

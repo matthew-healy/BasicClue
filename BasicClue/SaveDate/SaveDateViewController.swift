@@ -40,7 +40,8 @@ extension SaveDateViewController: SaveDateViewing {
         calendarButton.setTitle(title, for: .normal)
     }
 
-    func display(viewModel: String) {
-        saveDateButton.setTitle(viewModel, for: .normal)
+    func display(viewModel: DateViewModel) {
+        saveDateButton.setTitle(viewModel.day, for: .normal)
+        saveDateButton.isSelected = viewModel.isSelected
     }
 }
