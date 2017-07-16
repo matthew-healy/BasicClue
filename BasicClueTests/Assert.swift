@@ -10,7 +10,8 @@ struct Assert {
         case unexpectedNil
     }
 
-    static func notNilAndUnwrap<T>(_ maybeValue: T?) throws -> T {
+    static func notNilAndUnwrap<T>(_ maybeValue: T?, file: StaticString = #file, line: UInt = #line) throws -> T {
+        XCTAssertNotNil(maybeValue, file: file, line: line)
         guard let value = maybeValue else {
             throw TestError.unexpectedNil
         }

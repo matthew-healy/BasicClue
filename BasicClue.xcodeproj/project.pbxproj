@@ -39,6 +39,8 @@
 		28C522CD1F15108700FEA009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C522CB1F15108700FEA009 /* Main.storyboard */; };
 		28C522CF1F15108700FEA009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C522CE1F15108700FEA009 /* Assets.xcassets */; };
 		28C522D21F15108700FEA009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C522D01F15108700FEA009 /* LaunchScreen.storyboard */; };
+		34314D461F1B7343004337C0 /* ViewDatesViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34314D451F1B7343004337C0 /* ViewDatesViewing.swift */; };
+		34314D481F1B7377004337C0 /* MockViewDatesViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34314D471F1B7377004337C0 /* MockViewDatesViewing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		28C522D31F15108700FEA009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28C522D81F15108700FEA009 /* BasicClueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicClueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C522DE1F15108800FEA009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34314D451F1B7343004337C0 /* ViewDatesViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesViewing.swift; sourceTree = "<group>"; };
+		34314D471F1B7377004337C0 /* MockViewDatesViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewDatesViewing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */,
 				280225A31F1B704A0077D33A /* ViewDatesInteractor.swift */,
 				280225A91F1B72430077D33A /* ViewDatesPresenter.swift */,
+				34314D451F1B7343004337C0 /* ViewDatesViewing.swift */,
 			);
 			path = ViewDates;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				280225A51F1B705F0077D33A /* ViewDatesInteractorTests.swift */,
 				280225A71F1B72270077D33A /* ViewDatesPresenterTests.swift */,
+				34314D471F1B7377004337C0 /* MockViewDatesViewing.swift */,
 			);
 			path = ViewDates;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				2880B26B1F18B86F00883B6D /* DataStoring.swift in Sources */,
 				28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */,
 				280225AA1F1B72430077D33A /* ViewDatesPresenter.swift in Sources */,
+				34314D461F1B7343004337C0 /* ViewDatesViewing.swift in Sources */,
 				289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */,
 				2880B26F1F18BB0A00883B6D /* SaveDateInteracting.swift in Sources */,
 				2880B2671F18B7C400883B6D /* SaveDateInteractor.swift in Sources */,
@@ -347,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34314D481F1B7377004337C0 /* MockViewDatesViewing.swift in Sources */,
 				285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */,
 				2880B2691F18B7D200883B6D /* SaveDateInteractorTests.swift in Sources */,
 				2880B26D1F18B8B200883B6D /* MockDataStoring.swift in Sources */,
