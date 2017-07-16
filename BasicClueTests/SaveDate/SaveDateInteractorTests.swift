@@ -13,25 +13,43 @@ class SaveDateInteractorTests: XCTestCase {
 
     // MARK: toggleDateSelection tests
 
-    func test_saveDate_appendsToDateList() {
+    func test_toggleDateSelection_appendsToDateList() {
         subject.toggleDateSelection(0)
         XCTAssertTrue(mockStore.didAppendToDateList)
     }
 
-    func test_saveDate_1_appendsJanuary1ToDateList() {
+    func test_toggleDateSelection_1_appendsJanuary1ToDateList() {
         subject.toggleDateSelection(1)
         XCTAssertEqual("January 1", mockStore.spyNewDate)
     }
 
-    func test_saveDate_305_appendsJanuary305ToDateList() {
+    func test_toggleDateSelection_305_appendsJanuary305ToDateList() {
         subject.toggleDateSelection(305)
         XCTAssertEqual("January 305", mockStore.spyNewDate)
     }
     
-    func test_saveDate_dateIsAlreadyInList_doesNotAppendSecondTime() {
+    func test_toggleDateSelection_dateIsAlreadyInList_doesNotAppendSecondTime() {
         mockStore.stubDateList = ["January 111"]
         subject.toggleDateSelection(111)
         XCTAssertFalse(mockStore.didAppendToDateList)
+    }
+
+    func test_toggleDateSelection_dateAlreadyInList_removesDate() {
+        mockStore.stubDateList = ["January 25"]
+        subject.toggleDateSelection(25)
+        XCTAssertTrue(mockStore.didRemoveFromDateList)
+    }
+
+    func test_toggleDateSelected_dateAlreadyInList_removesCorrectDate() {
+        mockStore.stubDateList = ["January 1"]
+        subject.toggleDateSelection(1)
+        XCTAssertEqual("January 1", mockStore.spyRemovedDate)
+    }
+
+    func test_toggleDateSelected_dateAlreadyInList_removedDateIsNotHardcoded() {
+        mockStore.stubDateList = ["January 5"]
+        subject.toggleDateSelection(5)
+        XCTAssertEqual("January 5", mockStore.spyRemovedDate)
     }
 
     // MARK: isDateSelected tests

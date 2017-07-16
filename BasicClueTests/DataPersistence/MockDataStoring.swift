@@ -14,4 +14,11 @@ class MockDataStoring: DataStoring {
         didAppendToDateList = true
         spyNewDate = newDate
     }
+
+    var didRemoveFromDateList = false
+    var spyRemovedDate: String? = nil
+    func removeFromDateList(_ date: String) {
+        didRemoveFromDateList = true
+        spyRemovedDate = date
+    }
 }

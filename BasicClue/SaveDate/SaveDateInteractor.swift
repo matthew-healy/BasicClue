@@ -6,9 +6,12 @@ class SaveDateInteractor: SaveDateInteracting {
     }
 
     func toggleDateSelection(_ date: Int) {
-        guard !isDateSelected(date) else { return }
         let fullDate = fullDateString(fromDay: date)
-        dataStore.appendToDateList(newDate: fullDate)
+        if isDateSelected(date) {
+            dataStore.removeFromDateList(fullDate)
+        } else {
+            dataStore.appendToDateList(newDate: fullDate)
+        }
     }
 
     private func fullDateString(fromDay day: Int) -> String {
