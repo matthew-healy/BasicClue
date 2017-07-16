@@ -10,8 +10,8 @@ class SaveDateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpWireframe()
+        setUpSaveDateButton()
         eventController?.interfaceDidLoad()
-        saveDateButton.layer.masksToBounds = true
     }
 
     private func setUpWireframe() {
@@ -19,6 +19,11 @@ class SaveDateViewController: UIViewController {
         let dataStore = UserDefaultsDataStore(userDefaults: UserDefaults.standard)
         let interactor = SaveDateInteractor(dataStore: dataStore)
         eventController = SaveDateEventController(presenter: presenter, interactor: interactor)
+    }
+
+    private func setUpSaveDateButton() {
+        saveDateButton.layer.masksToBounds = true
+        saveDateButton.setBackgroundImage(.from(color: .cyan), for: .selected)
     }
 
     override func viewDidLayoutSubviews() {
@@ -43,5 +48,18 @@ extension SaveDateViewController: SaveDateViewing {
     func display(viewModel: DateViewModel) {
         saveDateButton.setTitle(viewModel.day, for: .normal)
         saveDateButton.isSelected = viewModel.isSelected
+    }
+}
+
+private extension UIImage {
+    static func from(color: UIColor) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(color.cgColor)
+        context?.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image ?? UIImage()
     }
 }
