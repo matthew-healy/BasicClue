@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		280225A21F1B6FA20077D33A /* ViewDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */; };
+		280225A41F1B704A0077D33A /* ViewDatesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225A31F1B704A0077D33A /* ViewDatesInteractor.swift */; };
+		280225A61F1B705F0077D33A /* ViewDatesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225A51F1B705F0077D33A /* ViewDatesInteractorTests.swift */; };
 		285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */; };
 		285A3F881F17756400C7E71C /* SaveDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F871F17756400C7E71C /* SaveDatePresenter.swift */; };
 		285A3F8A1F17757000C7E71C /* SaveDatePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F891F17757000C7E71C /* SaveDatePresenterTests.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesViewController.swift; sourceTree = "<group>"; };
+		280225A31F1B704A0077D33A /* ViewDatesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesInteractor.swift; sourceTree = "<group>"; };
+		280225A51F1B705F0077D33A /* ViewDatesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesInteractorTests.swift; sourceTree = "<group>"; };
 		285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlLayoutEngineTests.swift; sourceTree = "<group>"; };
 		285A3F871F17756400C7E71C /* SaveDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDatePresenter.swift; sourceTree = "<group>"; };
 		285A3F891F17757000C7E71C /* SaveDatePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDatePresenterTests.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */,
+				280225A31F1B704A0077D33A /* ViewDatesInteractor.swift */,
 			);
 			path = ViewDates;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		280225A01F1B6F630077D33A /* ViewDates */ = {
 			isa = PBXGroup;
 			children = (
+				280225A51F1B705F0077D33A /* ViewDatesInteractorTests.swift */,
 			);
 			path = ViewDates;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 				285A3F9E1F17C81200C7E71C /* UserDefaulting.swift in Sources */,
 				285A3F921F177A8000C7E71C /* SaveDateEventController.swift in Sources */,
 				285A3F991F17B02700C7E71C /* UserDefaultsDataStore.swift in Sources */,
+				280225A41F1B704A0077D33A /* ViewDatesInteractor.swift in Sources */,
 				2880B26B1F18B86F00883B6D /* DataStoring.swift in Sources */,
 				28C522C81F15108700FEA009 /* AppDelegate.swift in Sources */,
 				289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */,
@@ -336,6 +343,7 @@
 				285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */,
 				2880B2691F18B7D200883B6D /* SaveDateInteractorTests.swift in Sources */,
 				2880B26D1F18B8B200883B6D /* MockDataStoring.swift in Sources */,
+				280225A61F1B705F0077D33A /* ViewDatesInteractorTests.swift in Sources */,
 				2880B2711F18BBC700883B6D /* MockSaveDateInteracting.swift in Sources */,
 				285A3F941F177E8900C7E71C /* MockSaveDatePresenter.swift in Sources */,
 				285A3F901F177A6C00C7E71C /* SaveDateEventControllerTests.swift in Sources */,
