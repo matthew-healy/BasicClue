@@ -1,4 +1,4 @@
-class ViewDatesPresenter {
+class ViewDatesPresenter: ViewDatesPresenting {
     private let viewDelegate: ViewDatesViewing
 
     init(viewDelegate: ViewDatesViewing) {

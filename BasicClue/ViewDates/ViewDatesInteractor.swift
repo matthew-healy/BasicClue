@@ -1,6 +1,6 @@
 import Foundation
 
-class ViewDatesInteractor {
+class ViewDatesInteractor: ViewDatesInteracting {
     private let dataStore: DataStoring
 
     init(dataStore: DataStoring) {

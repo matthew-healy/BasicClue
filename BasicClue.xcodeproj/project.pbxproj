@@ -43,6 +43,10 @@
 		34314D481F1B7377004337C0 /* MockViewDatesViewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34314D471F1B7377004337C0 /* MockViewDatesViewing.swift */; };
 		345425751F1B79C300557D89 /* ViewDatesEventControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345425741F1B79C300557D89 /* ViewDatesEventControllerTests.swift */; };
 		345425771F1B79E500557D89 /* ViewDatesEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345425761F1B79E500557D89 /* ViewDatesEventController.swift */; };
+		345425791F1B7A5C00557D89 /* ViewDatesInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345425781F1B7A5C00557D89 /* ViewDatesInteracting.swift */; };
+		3454257B1F1B7A8000557D89 /* ViewDatesPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454257A1F1B7A8000557D89 /* ViewDatesPresenting.swift */; };
+		3454257D1F1B7AB500557D89 /* MockViewDatesPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454257C1F1B7AB500557D89 /* MockViewDatesPresenting.swift */; };
+		3454257F1F1B7AF000557D89 /* MockViewDatesInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454257E1F1B7AF000557D89 /* MockViewDatesInteracting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,10 @@
 		34314D471F1B7377004337C0 /* MockViewDatesViewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewDatesViewing.swift; sourceTree = "<group>"; };
 		345425741F1B79C300557D89 /* ViewDatesEventControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesEventControllerTests.swift; sourceTree = "<group>"; };
 		345425761F1B79E500557D89 /* ViewDatesEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesEventController.swift; sourceTree = "<group>"; };
+		345425781F1B7A5C00557D89 /* ViewDatesInteracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesInteracting.swift; sourceTree = "<group>"; };
+		3454257A1F1B7A8000557D89 /* ViewDatesPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesPresenting.swift; sourceTree = "<group>"; };
+		3454257C1F1B7AB500557D89 /* MockViewDatesPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewDatesPresenting.swift; sourceTree = "<group>"; };
+		3454257E1F1B7AF000557D89 /* MockViewDatesInteracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewDatesInteracting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +129,9 @@
 			children = (
 				280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */,
 				280225A31F1B704A0077D33A /* ViewDatesInteractor.swift */,
+				345425781F1B7A5C00557D89 /* ViewDatesInteracting.swift */,
 				280225A91F1B72430077D33A /* ViewDatesPresenter.swift */,
+				3454257A1F1B7A8000557D89 /* ViewDatesPresenting.swift */,
 				34314D451F1B7343004337C0 /* ViewDatesViewing.swift */,
 				345425761F1B79E500557D89 /* ViewDatesEventController.swift */,
 			);
@@ -135,6 +145,8 @@
 				280225A71F1B72270077D33A /* ViewDatesPresenterTests.swift */,
 				34314D471F1B7377004337C0 /* MockViewDatesViewing.swift */,
 				345425741F1B79C300557D89 /* ViewDatesEventControllerTests.swift */,
+				3454257C1F1B7AB500557D89 /* MockViewDatesPresenting.swift */,
+				3454257E1F1B7AF000557D89 /* MockViewDatesInteracting.swift */,
 			);
 			path = ViewDates;
 			sourceTree = "<group>";
@@ -336,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345425791F1B7A5C00557D89 /* ViewDatesInteracting.swift in Sources */,
 				285A3F8E1F1776BA00C7E71C /* SaveDateViewing.swift in Sources */,
 				285A3F9E1F17C81200C7E71C /* UserDefaulting.swift in Sources */,
 				285A3F921F177A8000C7E71C /* SaveDateEventController.swift in Sources */,
@@ -350,6 +363,7 @@
 				2880B2671F18B7C400883B6D /* SaveDateInteractor.swift in Sources */,
 				280225A21F1B6FA20077D33A /* ViewDatesViewController.swift in Sources */,
 				345425771F1B79E500557D89 /* ViewDatesEventController.swift in Sources */,
+				3454257B1F1B7A8000557D89 /* ViewDatesPresenting.swift in Sources */,
 				289C7E0D1F165CDA00BA99AA /* CircularControl.swift in Sources */,
 				285A3F881F17756400C7E71C /* SaveDatePresenter.swift in Sources */,
 				289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */,
@@ -367,6 +381,7 @@
 				2880B26D1F18B8B200883B6D /* MockDataStoring.swift in Sources */,
 				280225A61F1B705F0077D33A /* ViewDatesInteractorTests.swift in Sources */,
 				2880B2711F18BBC700883B6D /* MockSaveDateInteracting.swift in Sources */,
+				3454257F1F1B7AF000557D89 /* MockViewDatesInteracting.swift in Sources */,
 				285A3F941F177E8900C7E71C /* MockSaveDatePresenter.swift in Sources */,
 				285A3F901F177A6C00C7E71C /* SaveDateEventControllerTests.swift in Sources */,
 				280225A81F1B72270077D33A /* ViewDatesPresenterTests.swift in Sources */,
@@ -374,6 +389,7 @@
 				345425751F1B79C300557D89 /* ViewDatesEventControllerTests.swift in Sources */,
 				285A3F9C1F17B06000C7E71C /* UserDefaultsDataStoreTests.swift in Sources */,
 				285A3F8C1F17762500C7E71C /* MockSaveDateViewDelegate.swift in Sources */,
+				3454257D1F1B7AB500557D89 /* MockViewDatesPresenting.swift in Sources */,
 				289C7E0B1F16510F00BA99AA /* Assert.swift in Sources */,
 				285A3FA01F17CA8700C7E71C /* MockUserDefaulting.swift in Sources */,
 			);
