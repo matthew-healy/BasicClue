@@ -12,7 +12,7 @@ class ViewDatesInteractorTests: XCTestCase {
     }
     
     func test_getDates_getsDateListFromStore() {
-        subject.getDates()
+        _ = subject.getDates()
         XCTAssertTrue(mockStore.didGetDateList)
     }
     
