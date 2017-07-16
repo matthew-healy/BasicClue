@@ -1,8 +1,8 @@
 class ViewDatesPresenter: ViewDatesPresenting {
-    private let viewDelegate: ViewDatesViewing
+    private unowned let viewDelegate: ViewDatesViewing
 
-    init(viewDelegate: ViewDatesViewing) {
-        self.viewDelegate = viewDelegate
+    init(view: ViewDatesViewing) {
+        self.viewDelegate = view
     }
 
     func presentDates(_ dates: [String]) {

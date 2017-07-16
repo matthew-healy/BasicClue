@@ -8,7 +8,7 @@ class ViewDatesPresenterTests: XCTestCase {
 
     override func setUp() {
         mockViewDelegate = MockViewDatesViewing()
-        subject = ViewDatesPresenter(viewDelegate: mockViewDelegate)
+        subject = ViewDatesPresenter(view: mockViewDelegate)
     }
 
     func test_presentDates_displaysDates() {
