@@ -28,5 +28,6 @@ class SaveDateEventController {
 
     func saveDateButtonTapped() {
         interactor.toggleDateSelection(date)
+        presentDateWithSelectionState()
     }
 }

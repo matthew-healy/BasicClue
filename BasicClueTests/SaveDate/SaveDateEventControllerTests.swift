@@ -92,4 +92,31 @@ class SaveDateEventControllerTests: XCTestCase {
         XCTAssertEqual(5, mockInteractor.spySavedDate)
     }
 
+    func test_saveDateButtonTapped_3Selected_presents3() {
+        subject.selected(date: 3)
+        subject.saveDateButtonTapped()
+        XCTAssertEqual(3, mockPresenter.spyPresentedDay)
+    }
+
+    func test_saveDateButtonTapped_20Selected_presents20() {
+        subject.selected(date: 20)
+        subject.saveDateButtonTapped()
+        XCTAssertEqual(20, mockPresenter.spyPresentedDay)
+    }
+
+    func test_saveDateButtonTapped_1Deselected_presentsUnselected() throws {
+        mockInteractor.stubIsDateSelected = true
+        subject.selected(date: 1)
+        subject.saveDateButtonTapped()
+        let result = try Assert.notNilAndUnwrap(mockPresenter.spyPresentedSelected)
+        XCTAssertTrue(result)
+    }
+
+    func test_saveDateButtonTapped_2Selected_presentsSelected() throws {
+        subject.selected(date: 2)
+        subject.saveDateButtonTapped()
+        let result = try Assert.notNilAndUnwrap(mockPresenter.spyPresentedSelected)
+        XCTAssertFalse(result)
+    }
+
 }
