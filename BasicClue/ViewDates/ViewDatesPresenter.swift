@@ -5,6 +5,10 @@ class ViewDatesPresenter: ViewDatesPresenting {
         self.viewDelegate = view
     }
 
+    func presentScreenTitle() {
+        viewDelegate.setScreenTitle(to: "Calendar")
+    }
+
     func presentDates(_ dates: [String]) {
         viewDelegate.displayDates(dates)
     }

@@ -8,6 +8,7 @@ class ViewDatesEventController {
     }
 
     func interfaceDidLoad() {
+        presenter.presentScreenTitle()
         let dates = interactor.getDates()
         presenter.presentDates(dates)
     }

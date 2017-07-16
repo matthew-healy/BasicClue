@@ -11,6 +11,20 @@ class ViewDatesPresenterTests: XCTestCase {
         subject = ViewDatesPresenter(view: mockViewDelegate)
     }
 
+    // MARK: presentScreenTitle tests
+
+    func test_presentScreenTitle_setsScreenTitle() {
+        subject.presentScreenTitle()
+        XCTAssertTrue(mockViewDelegate.didSetScreenTitle)
+    }
+
+    func test_presentScreenTitle_setsScreenTitleToCalendar() {
+        subject.presentScreenTitle()
+        XCTAssertEqual("Calendar", mockViewDelegate.spyScreenTitle)
+    }
+
+    // MARK: presentDates tests
+
     func test_presentDates_displaysDates() {
         subject.presentDates([])
         XCTAssertTrue(mockViewDelegate.didDisplayDates)

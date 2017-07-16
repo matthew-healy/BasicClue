@@ -23,6 +23,16 @@ class SaveDatePresenterTests: XCTestCase {
         XCTAssertEqual("Calendar", mockView.spyCalendarButtonTitle)
     }
 
+    func test_setUpScreen_setsScreenTitle() {
+        subject.setUpScreen()
+        XCTAssertTrue(mockView.didSetPageTitle)
+    }
+
+    func test_setUpScreen_setsScreenTitleToBasicClue() {
+        subject.setUpScreen()
+        XCTAssertEqual("Basic Clue", mockView.spyPageTitle)
+    }
+
     // MARK: presentDay tests
 
     func test_presentDay_callsDisplayViewModelOnViewDelegate() {

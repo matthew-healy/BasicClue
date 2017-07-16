@@ -16,6 +16,11 @@ class ViewDatesEventControllerTests: XCTestCase {
         )
     }
 
+    func test_interfaceDidLoad_presentsScreenTitle() {
+        subject.interfaceDidLoad()
+        XCTAssertTrue(mockPresenter.didPresentScreenTitle)
+    }
+
     func test_interfaceDidLoad_getsDatesFromInteractor() {
         subject.interfaceDidLoad()
         XCTAssertTrue(mockInteractor.didGetDates)

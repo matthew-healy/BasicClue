@@ -25,6 +25,10 @@ class ViewDatesViewController: UIViewController {
 }
 
 extension ViewDatesViewController: ViewDatesViewing {
+    func setScreenTitle(to title: String) {
+        self.title = title
+    }
+
     func displayDates(_ dates: [String]) {
         self.dates = dates
         datesTableView.reloadData()

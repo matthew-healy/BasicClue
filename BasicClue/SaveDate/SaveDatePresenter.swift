@@ -10,6 +10,7 @@ class SaveDatePresenter: SaveDatePresenting {
     }
 
     func setUpScreen() {
+        view.setPageTitle(to: "Basic Clue")
         view.setCalendarButtonTitle(to: calendarButtonTitle)
     }
 

@@ -41,6 +41,10 @@ class SaveDateViewController: UIViewController {
 }
 
 extension SaveDateViewController: SaveDateViewing {
+    func setPageTitle(to title: String) {
+        self.title = title
+    }
+
     func setCalendarButtonTitle(to title: String) {
         calendarButton.setTitle(title, for: .normal)
     }
