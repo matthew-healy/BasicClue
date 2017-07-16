@@ -13,12 +13,17 @@ class SaveDateEventController {
 
     func interfaceDidLoad() {
         presenter.setUpScreen()
-        presenter.present(day: date, selected: false)
+        presentDateWithSelectionState()
+    }
+
+    private func presentDateWithSelectionState() {
+        let isDateSelected = interactor.isDateSelected(date)
+        presenter.present(day: date, selected: isDateSelected)
     }
 
     func selected(date: Int) {
         self.date = date
-        presenter.present(day: date, selected: false)
+        presentDateWithSelectionState()
     }
 
     func saveDateButtonTapped() {

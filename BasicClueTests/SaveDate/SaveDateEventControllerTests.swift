@@ -28,6 +28,20 @@ class SaveDateEventControllerTests: XCTestCase {
         XCTAssertEqual(1, mockPresenter.spyPresentedDay)
     }
 
+    func test_interfaceDidLoad_day1Selected_presentsSelected() throws {
+        mockInteractor.stubIsDateSelected = true
+        subject.interfaceDidLoad()
+        let result = try Assert.notNilAndUnwrap(mockPresenter.spyPresentedSelected)
+        XCTAssertTrue(result)
+    }
+
+    func test_interfaceDidLoad_day1NotSelected_presetsUnselected() throws {
+        mockInteractor.stubIsDateSelected = false
+        subject.interfaceDidLoad()
+        let result = try Assert.notNilAndUnwrap(mockPresenter.spyPresentedSelected)
+        XCTAssertFalse(result)
+    }
+
     // MARK: selected(date:) tests
 
     func test_selectedDate_tellsPresenterToPresentDay() {
@@ -45,6 +59,20 @@ class SaveDateEventControllerTests: XCTestCase {
         XCTAssertEqual(15, mockPresenter.spyPresentedDay)
     }
     
+    func test_selectedDate_dateSelected_presentsSelected() throws {
+        mockInteractor.stubIsDateSelected = true
+        subject.selected(date: 25)
+        let result = try Assert.notNilAndUnwrap(mockPresenter.spyPresentedSelected)
+        XCTAssertTrue(result)
+    }
+
+    func test_selectedDate_dateNotSelected_presetsUnselected() throws {
+        mockInteractor.stubIsDateSelected = false
+        subject.selected(date: 150)
+        let result = try Assert.notNilAndUnwrap(mockPresenter.spyPresentedSelected)
+        XCTAssertFalse(result)
+    }
+
     // MARK: saveDateButtonTapped(date:) tests
 
     func test_saveDateButtonTapped_savesDate() {
