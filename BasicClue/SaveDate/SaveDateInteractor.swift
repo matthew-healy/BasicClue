@@ -7,6 +7,8 @@ class SaveDateInteractor: SaveDateInteracting {
 
     func saveDate(_ date: Int) {
         let fullDate = "January \(date)"
+        let dateList = dataStore.getDateList()
+        guard !dateList.contains(fullDate) else { return }
         dataStore.appendToDateList(newDate: fullDate)
     }
 }

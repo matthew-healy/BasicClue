@@ -26,4 +26,10 @@ class SaveDateInteractorTests: XCTestCase {
         XCTAssertEqual("January 305", mockStore.spyNewDate)
     }
     
+    func test_saveDate_dateIsAlreadyInList_doesNotAppendSecondTime() {
+        mockStore.stubDateList = ["January 111"]
+        subject.saveDate(111)
+        XCTAssertFalse(mockStore.didAppendToDateList)
+    }
+
 }
