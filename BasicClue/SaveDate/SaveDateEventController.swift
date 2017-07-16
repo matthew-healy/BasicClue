@@ -14,12 +14,12 @@ class SaveDateEventController {
     func interfaceDidLoad() {
         presenter.setUpScreen()
         let firstDay = 1
-        presenter.present(day: firstDay)
+        presenter.present(day: firstDay, selected: false)
     }
 
     func selected(date: Int) {
         self.date = date
-        presenter.present(day: date)
+        presenter.present(day: date, selected: false)
     }
 
     func saveDateButtonTapped() {

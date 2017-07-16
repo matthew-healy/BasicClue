@@ -23,21 +23,33 @@ class SaveDatePresenterTests: XCTestCase {
         XCTAssertEqual("Calendar", mockView.spyCalendarButtonTitle)
     }
 
-    // MARK: presentSelectedDay tests
+    // MARK: presentDay tests
 
     func test_presentDay_callsDisplayViewModelOnViewDelegate() {
-        subject.present(day: 1)
+        subject.present(day: 1, selected: false)
         XCTAssertTrue(mockView.didCallDisplayViewModel)
     }
 
     func test_presentDay_day1_displaysJanuary1() {
-        subject.present(day: 1)
+        subject.present(day: 1, selected: false)
         XCTAssertEqual("January 1", mockView.spyDisplayViewModel?.day)
     }
 
     func test_presentDay_day31_displaysJanuary31() {
-        subject.present(day: 31)
+        subject.present(day: 31, selected: false)
         XCTAssertEqual("January 31", mockView.spyDisplayViewModel?.day)
     }
     
+    func test_presentDay_selectedTrue_displaysSelected() throws {
+        subject.present(day: 0, selected: true)
+        let result = try Assert.notNilAndUnwrap(mockView.spyDisplayViewModel)
+        XCTAssertTrue(result.isSelected)
+    }
+
+    func test_presentDay_selectedFalse_displaysNotSelected() throws {
+        subject.present(day: 0, selected: false)
+        let result = try Assert.notNilAndUnwrap(mockView.spyDisplayViewModel)
+        XCTAssertFalse(result.isSelected)
+    }
+
 }

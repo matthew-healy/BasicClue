@@ -8,8 +8,10 @@ class MockSaveDatePresenter: SaveDatePresenting {
 
     var didPresentDay = false
     var spyPresentedDay: Int? = nil
-    func present(day: Int) {
+    var spyPresentedSelected: Bool? = nil
+    func present(day: Int, selected: Bool) {
         didPresentDay = true
         spyPresentedDay = day
+        spyPresentedSelected = selected
     }
 }

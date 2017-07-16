@@ -1,4 +1,4 @@
 protocol SaveDatePresenting {
     func setUpScreen()
-    func present(day: Int)
+    func present(day: Int, selected: Bool)
 }

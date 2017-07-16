@@ -13,8 +13,11 @@ class SaveDatePresenter: SaveDatePresenting {
         view.setCalendarButtonTitle(to: calendarButtonTitle)
     }
 
-    func present(day: Int) {
-        let viewModel = DateViewModel(day: "\(month) \(day)", isSelected: false)
+    func present(day: Int, selected: Bool) {
+        let viewModel = DateViewModel(
+            day: "\(month) \(day)",
+            isSelected: selected
+        )
         view.display(viewModel: viewModel)
     }
 
