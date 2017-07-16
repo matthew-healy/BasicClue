@@ -7,4 +7,13 @@ class MockSaveDateInteracting: SaveDateInteracting {
         didSaveDate = true
         spySavedDate = date
     }
+
+    var didCheckIsDateSelected = false
+    var spyDateSelected: Int? = nil
+    var stubIsDateSelected: Bool? = nil
+    func isDateSelected(_ date: Int) -> Bool {
+        didCheckIsDateSelected = true
+        spyDateSelected = date
+        return stubIsDateSelected ?? false
+    }
 }

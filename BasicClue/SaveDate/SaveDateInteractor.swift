@@ -6,9 +6,17 @@ class SaveDateInteractor: SaveDateInteracting {
     }
 
     func saveDate(_ date: Int) {
-        let fullDate = "January \(date)"
-        let dateList = dataStore.getDateList()
-        guard !dateList.contains(fullDate) else { return }
+        guard !isDateSelected(date) else { return }
+        let fullDate = fullDateString(fromDay: date)
         dataStore.appendToDateList(newDate: fullDate)
+    }
+
+    private func fullDateString(fromDay day: Int) -> String {
+        return "January \(day)"
+    }
+
+    func isDateSelected(_ date: Int) -> Bool {
+        let fullDate = fullDateString(fromDay: date)
+        return dataStore.getDateList().contains(fullDate)
     }
 }
