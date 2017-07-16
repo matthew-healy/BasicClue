@@ -12,6 +12,16 @@ class SaveDateViewController: UIViewController {
         setUpWireframe()
         eventController?.interfaceDidLoad()
         saveDateButton.layer.masksToBounds = true
+ 
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(UIColor.cyan.cgColor)
+        context?.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        saveDateButton.setBackgroundImage(image, for: .selected)
     }
 
     private func setUpWireframe() {
@@ -32,6 +42,7 @@ class SaveDateViewController: UIViewController {
 
     @IBAction func didPressDateButton(_ sender: UIButton) {
         eventController?.saveDateButtonTapped()
+        sender.isSelected = !sender.isSelected
     }
 }
 
