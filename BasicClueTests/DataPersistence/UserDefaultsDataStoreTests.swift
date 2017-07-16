@@ -86,4 +86,32 @@ class UserDefaultsDataStoreTests: XCTestCase {
         XCTAssertEqual(try data(from: ["abc", "def", "hello"]), spyValue)
     }
 
+    // MARK: removeFromDateList tests
+
+    func test_removeFromDateList_listEmpty_doesNotSave() throws {
+        mockDefaults.stubData = try data(fromList: [])
+        subject.removeFromDateList("")
+        XCTAssertNil(mockDefaults.spyValue)
+    }
+
+    func test_removeFromDateList_ABC_listIncludesABC_savesEmptyList() throws {
+        mockDefaults.stubData = try data(fromList: ["ABC"])
+        subject.removeFromDateList("ABC")
+        let spyValue = try Assert.notNilAndUnwrap(typedValue())
+        XCTAssertEqual(try data(from: []), spyValue)
+    }
+
+    func test_removeFromDateList_listNonemptyButItemNotOn_doesNotSave() throws {
+        mockDefaults.stubData = try data(fromList: ["yo"])
+        subject.removeFromDateList("hi")
+        XCTAssertNil(mockDefaults.spyValue)
+    }
+
+    func test_removeFromDateList_C_listIsABCD_savesABD() throws {
+        mockDefaults.stubData = try data(fromList: ["A", "B", "C", "D"])
+        subject.removeFromDateList("C")
+        let spyValue = try Assert.notNilAndUnwrap(typedValue())
+        XCTAssertEqual(try data(from: ["A", "B", "D"]), spyValue)
+    }
+
 }
