@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEH-vM-oDZ" userLabel="ContentSpacerView">
-                                <rect key="frame" x="-1" y="64" width="375" height="603"/>
+                                <rect key="frame" x="-1" y="84" width="375" height="583"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="aIO-va-aRn" userLabel="CircularControl" customClass="CircularControl" customModule="BasicClue" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="375" height="375"/>
@@ -66,10 +66,10 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-ME-BnD" userLabel="ButtonSpacerView">
-                                        <rect key="frame" x="0.0" y="439" width="375" height="164"/>
+                                        <rect key="frame" x="0.0" y="439" width="375" height="144"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNo-7f-92U" userLabel="CalendarButton">
-                                                <rect key="frame" x="164.5" y="67" width="46" height="30"/>
+                                                <rect key="frame" x="164.5" y="57" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <segue destination="3Sw-VG-vpt" kind="show" id="HxZ-4L-9yW"/>
@@ -114,17 +114,17 @@
             </objects>
             <point key="canvasLocation" x="1112.8" y="-151.57421289355324"/>
         </scene>
-        <!--View Controller-->
+        <!--View Dates View Controller-->
         <scene sceneID="jly-kf-iuC">
             <objects>
-                <viewController id="3Sw-VG-vpt" sceneMemberID="viewController">
+                <viewController id="3Sw-VG-vpt" customClass="ViewDatesViewController" customModule="BasicClue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides/>
                     <view key="view" contentMode="scaleToFill" id="anq-Co-z5z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="02S-er-l2t" userLabel="SavedDateTableView">
-                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -137,6 +137,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DSg-rE-zNm"/>
                     </view>
+                    <connections>
+                        <outlet property="datesTableView" destination="02S-er-l2t" id="rGo-EX-09R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr2-3b-RPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

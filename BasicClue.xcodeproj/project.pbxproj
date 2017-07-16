@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280225A21F1B6FA20077D33A /* ViewDatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */; };
 		285A3F841F166DFD00C7E71C /* CircularControlLayoutEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */; };
 		285A3F881F17756400C7E71C /* SaveDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F871F17756400C7E71C /* SaveDatePresenter.swift */; };
 		285A3F8A1F17757000C7E71C /* SaveDatePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285A3F891F17757000C7E71C /* SaveDatePresenterTests.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDatesViewController.swift; sourceTree = "<group>"; };
 		285A3F831F166D9D00C7E71C /* CircularControlLayoutEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularControlLayoutEngineTests.swift; sourceTree = "<group>"; };
 		285A3F871F17756400C7E71C /* SaveDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDatePresenter.swift; sourceTree = "<group>"; };
 		285A3F891F17757000C7E71C /* SaveDatePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDatePresenterTests.swift; sourceTree = "<group>"; };
@@ -98,6 +100,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2802259F1F1B6F550077D33A /* ViewDates */ = {
+			isa = PBXGroup;
+			children = (
+				280225A11F1B6FA20077D33A /* ViewDatesViewController.swift */,
+			);
+			path = ViewDates;
+			sourceTree = "<group>";
+		};
+		280225A01F1B6F630077D33A /* ViewDates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewDates;
+			sourceTree = "<group>";
+		};
 		285A3F821F166D9D00C7E71C /* SaveDate */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +188,7 @@
 			children = (
 				285A3F971F17AFEE00C7E71C /* DataPersistence */,
 				289C7DFF1F15602E00BA99AA /* SaveDate */,
+				2802259F1F1B6F550077D33A /* ViewDates */,
 				28C522C71F15108700FEA009 /* AppDelegate.swift */,
 				28C522CB1F15108700FEA009 /* Main.storyboard */,
 				28C522CE1F15108700FEA009 /* Assets.xcassets */,
@@ -185,6 +203,7 @@
 			children = (
 				285A3F9A1F17B04C00C7E71C /* DataPersistence */,
 				285A3F821F166D9D00C7E71C /* SaveDate */,
+				280225A01F1B6F630077D33A /* ViewDates */,
 				28C522DE1F15108800FEA009 /* Info.plist */,
 				289C7E0A1F16510F00BA99AA /* Assert.swift */,
 			);
@@ -302,6 +321,7 @@
 				289C7E091F163ACA00BA99AA /* CircularControlLayoutEngine.swift in Sources */,
 				2880B26F1F18BB0A00883B6D /* SaveDateInteracting.swift in Sources */,
 				2880B2671F18B7C400883B6D /* SaveDateInteractor.swift in Sources */,
+				280225A21F1B6FA20077D33A /* ViewDatesViewController.swift in Sources */,
 				289C7E0D1F165CDA00BA99AA /* CircularControl.swift in Sources */,
 				285A3F881F17756400C7E71C /* SaveDatePresenter.swift in Sources */,
 				289C7E011F1560C100BA99AA /* SaveDateViewController.swift in Sources */,
